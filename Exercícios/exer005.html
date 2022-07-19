@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JavaScript</title>
+    <style>
+        body{
+            font: normal 16pt;
+        }
+        button{
+            font-size: 16pt; padding: 25px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Números</h1>
+    <button onclick="calcular()">Clique aqui para calcular</button>
+    <div id="res">O resultado vai aparecer aqui...</div>
+    <script>
+        alert('Seja bem vindo(a) ao meu site!')
+        function calcular(){
+            var n1 = prompt('Digite um número:')
+            var res = document.getElementById('res')
+            res.innerHTML = (`Dividindo ${n1} por 2 dá ${n1/2}, multiplicando por 2 da ${n1*2}`)
+        }
+    </script>
+</body>
+</html>

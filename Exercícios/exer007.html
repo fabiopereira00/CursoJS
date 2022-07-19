@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JavaScript</title>
+    <style>
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando a média</h1>
+    <button onclick="calcular()">Clique aqui para calcular a sua média</button>
+    <div id="res">
+        <p>Resultado vai aparecer aqui...</p>
+    </div>
+    <script>
+        function calcular(){
+            var nome = window.prompt('Como te chamas?')
+            let nota1 = Number(window.prompt(nome + ' qual foi a tua primeira nota?'))
+            let nota2 = Number(window.prompt('E a tua segunda nota por favor?'))
+            let media = (nota1+nota2) / 2
+            
+            
+            let res = document.querySelector('div#res')
+            res.innerHTML = `<p>Calculando a média final do <strong>${nome}</strong></p>`
+            res.innerHTML += `As notas obtidas foram: <mark>${nota1}</mark> e <mark>${nota2}</mark>`
+            res.innerHTML += `<p><strong>${nome}</strong>, a tua média final é de <mark>${media}</mark></p>`
+        }
+    </script>
+</body>
+</html>

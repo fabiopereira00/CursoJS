@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques</title>
+    <style>
+        body{
+            font: normal 14pt Arial;
+        }
+        button{
+            font-size: 16pt; padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button onclick="contar()">Clique aqui</button>
+    <button onclick="resetar()">Resetar o contador</button>
+    <div id="contador">
+        <p>O contador está com <strong>0</strong> cliques</p>
+    </div>
+    <script>
+        var cont = 0
+        var res = document.getElementById('contador')
+        function contar(){
+            cont += 1
+            res.innerHTML = `<p>O contador está com <mark>${cont}</marc> cliques.</p>`
+        }
+        function resetar(){
+            cont = 0
+            res.innerHTML = `<p>O contador voltou a estar com <strong>${cont}</strongcliques.</p>`
+        }
+    </script>
+</body>
+</html>
