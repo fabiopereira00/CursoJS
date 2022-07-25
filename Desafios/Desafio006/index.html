@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperatuta</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn{
+            padding: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de temperatura</h1>
+    <input type="button" class="btn" value="Converter" onclick="converter()">
+    <div id="res"></div>
+    <script>
+        function converter(){
+            var tempc = Number(prompt('Indique abaixo uma temperatura em ºC (Celsius)'))
+            var tempf = (tempc * 9/5) + 32
+            var tempk = tempc + 273.15
+            var res = document.getElementById('res')
+            res.innerHTML = `<p><strong>A temperatura de ${tempc}ºC, corresponde a...</strong>`
+            res.innerHTML += `<p>${tempk.toFixed(2)}ºK (Kelvin)`
+            res.innerHTML += `<p>${tempf}ºF (Fahrenheit)`
+        }
+    </script>
+</body>
+</html>

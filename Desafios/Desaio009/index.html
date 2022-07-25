@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salarial</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        body{
+            font-size: 1.3em;
+        }
+        .btn{
+            padding: 20px;
+            margin-left: 10px;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <input type="button" class="btn" value="Reajustar Salário" onclick="reajustar()">
+    <div id="res">Clique no botão acima para iniciar.</div>
+
+    <script>
+        function reajustar(){
+            var nome = prompt('Primeiro e ultimo nome do/a funcionário/a?')
+            var salario = Number.parseFloat(prompt(`Qual é o salário atual do/a funcionário/a ${nome}?`))
+            var plus = Number(prompt(`Qual vai ser a porcentagem de aumento do/a funcionário/a ${nome}`))
+            var aumento = (salario * plus) / 100
+            var total = salario + aumento
+            var res = document.getElementById('res')
+            res.innerHTML = `<p><strong>${nome} recebeu um aumento salarial!</strong!`
+            res.innerHTML += `<p>O salário atual era ${salario.toFixed(2)}€.`
+            res.innerHTML += `<p>Com um aumento de ${plus}%, o salário vai aumentar ${aumento.toFixed(2)}€ no próximo mês.`
+            res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar ${total.toFixed(2)}€.`
+        }
+    </script>
+</body>
+</html>

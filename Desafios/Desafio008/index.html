@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de descontos</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn{
+            padding: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    <input type="button" class="btn" value="Desconto de 10%" onclick="desconta()">
+    <div id="res"></div>
+
+    <script>
+        function desconta(){
+            var produto = prompt('Qual o produto que deseja comprar? ')
+            var preço = Number.parseFloat(prompt('Quanto custa o desejado produto? €'))
+            var desconto = (preço * 10) / 100
+            var final = preço - desconto
+            var res = document.getElementById('res')
+            res.innerHTML = `<p><strong>Calculando desconto de 10% para ${produto}...</strong>`
+            res.innerHTML += `<p>O preço original era ${preço.toFixed(2)}€.`
+            res.innerHTML += `<p>Acabas-te de ganhar ${desconto.toFixed(2)}€ de desconto (-10%).`
+            res.innerHTML += `<p>No fim, vais acabar por pagar ${final.toFixed(2)}€ no produto ${produto}.`
+        }
+    </script>
+</body>
+</html>

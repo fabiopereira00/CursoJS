@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn{
+            padding: 20px 30px;
+            margin: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+    <input type="button" class="btn" id="btn1" value="Botão 1" onclick="primeiro()">
+    <input type="button" class="btn" id="btn2" value="Botão 2" onclick="segundo()">
+    <input type="button" class="btn" id="btn3" value="Botão 3" onclick="terceiro()">
+</body>
+<script>
+    function primeiro(){
+        var btn1 = document.getElementById('btn1')
+        alert('Voçe clicou no 1º botão!')
+    }
+    function segundo(){
+        var btn2 = document.getElementById('btn2')
+        alert('Voçe clicou no 2º botão!')
+    }
+    function terceiro(){
+        var btn3 = document.getElementById('btn3')
+        alert('Voçe clicou no 3º botão!')
+    }
+
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja bem-vindo!</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(45deg, #000, crimson);
+        }
+        .btn{
+            padding: 20px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seja bem-vindo</h1>
+    <input type="button" class="btn" value="Inicie o Desafio" onclick="clicou()">
+</body>
+<script>
+    function clicou(){
+        var nome = prompt('Como te chamas?')
+        var idade = prompt(`Olá, ${nome}! Quantos anos tens?`)
+        alert(`Acabei de conhecer um tal de ${nome}, que tem ${idade} anos de idade!`)
+    }
+</script>
+</html>
