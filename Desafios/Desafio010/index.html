@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.2em;
+        }
+        .btn{
+            padding: 20px 30px;
+            font-size: 1.3em;
+        }
+        div{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <input type="button" class="btn" value="Calcular" onclick="calcular">
+    <div id="res">Considerando uma equação no formato <strong>a</strong>x<sup>2</sup> + <strong>b</strong>x + <strong>c</strong> = 0</div>
+
+    <script>
+        function calcular(){
+            var a = Number(prompt('Qual é o valor de a?'))
+            var b = Number(prompt('Qual é o valor de b?'))
+            var c = Number(prompt('Qual é o valor de c?'))
+            var res = document.getElementById('res')
+            
+        }
+    </script>
+</body>
+</html>
