@@ -1,21 +1,14 @@
-/*let num = [6, 3, 9, 5 ,2]
+let num = [5, 8, 2, 9, 3]
+num[5] = 7
+num.push(4)
 num.sort()
-console.log(num)
-console.log(`Nosso vetor tem ${num.length} posições`)
-console.log(`Nosso vetor tem ${num[0]} na primeira posição`)*/
-/*let valores = [9,3,6,4,1,8]
-valores.sort()
-for (let pos = 0; pos < valores.length; pos++){
-    console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
+/*let len = num.length
+console.log(`Nosso array é o ${num} e ele tem ${len} valores`) 
+console.log(`O primeiro valor do meu array é ${num[0]}`)
+for(let pos = 0; pos < len; pos++){
+    console.log(`A posição ${pos} tem o valor ${num[pos]}`)
 }
 */
-let valores = [8,4,9,2,7]
-valores.sort()
-valores.push(1)
-console.log(valores)
-let pos = valores.indexOf(6)
-if (pos == -1){
-    console.log(`O valor nao foi encontrado.`)
-}else{
-    console.log(`O valor encontra-se na posição ${valores[pos]}`)
+for (let pos in num){
+    console.log(`A posição ${pos} tem o valor ${num[pos]}`)
 }

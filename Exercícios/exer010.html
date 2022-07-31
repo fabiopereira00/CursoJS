@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript externo</title>
+    <title>Super Contador</title>
+    <style>
+        body{
+            background-color: rgb(9, 197, 200);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+        .conteudo{
+            background-color: white;
+            margin: auto;
+            width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.339);
+
+        }
+    </style>
 </head>
 <body>
-    <h1>JavaScript externo</h1>
+    <h1>Vamos contar</h1>
+    <div class="conteudo">
+        <p>
+            <label for="inicio">Início:</label>
+            <input type="number" name="inicio" id="inicio">
+        </p>
+        <p>
+            <label for="fim">Fim:</label>
+            <input type="number" name="fim" id="fim">
+        </p>
+        <p>
+            <label for="passo">Passo:</label>
+            <input type="number" name="passo" id="passo">
+        </p>
+        <p>
+            <input type="button" value="Contar" onclick="contar()">
+        </p>
+        <div id="res">
+            Preparando a contagem...
+        </div>
+    </div>
+    <script>
+        function contar(){
+            var inicio = document.getElementById('inicio')
+            var fim = document.getElementById('fim')
+            var passo = document.getElementById('passo')
+            var res = document.getElementById('res')
+            
+            if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+                alert('[ERRO] Dados inválidos! Porfavor tente novamente...')
+            }else{
+                res.innerHTML = 'Contando: '
+                var i = Number(inicio.value)
+                var f = Number(fim.value)
+                var p = Number(passo.value)
+                if (p <= 0){
+                    alert('[ERRO] Passo inválido! Considerando PASSO como 1')
+                    p = 1
+                }
+                if (i < f){
+                for (var c = i; c <= f; c+= p){
+                    res.innerHTML += `${c} \u{27a1} `
+                }
+                }else{
+                    for (var c = i; c >= f; c -= p){
+                    res.innerHTML += `${c} \u{27a1}`
+                    }
+                }
+                res.innerHTML += '\u{1f6d1}'
+            }
+
+        }
+    </script>
 </body>
 </html>

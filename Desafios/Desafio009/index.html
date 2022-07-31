@@ -30,14 +30,14 @@
     <script>
         function reajustar(){
             var nome = prompt('Primeiro e ultimo nome do/a funcionário/a?')
-            var salario = Number.parseFloat(prompt(`Qual é o salário atual do/a funcionário/a ${nome}?`))
+            var salario = Number(prompt(`Qual é o salário atual do/a funcionário/a ${nome}?`))
             var plus = Number(prompt(`Qual vai ser a porcentagem de aumento do/a funcionário/a ${nome}`))
             var aumento = (salario * plus) / 100
             var total = salario + aumento
             var res = document.getElementById('res')
             res.innerHTML = `<p><strong>${nome} recebeu um aumento salarial!</strong!`
-            res.innerHTML += `<p>O salário atual era ${salario.toFixed(2)}€.`
-            res.innerHTML += `<p>Com um aumento de ${plus}%, o salário vai aumentar ${aumento.toFixed(2)}€ no próximo mês.`
+            res.innerHTML += `<p>O salário atual era ${salario}€.`
+            res.innerHTML += `<p>Com um aumento de ${plus}%, o salário vai aumentar ${aumento}€ no próximo mês.`
             res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar ${total.toFixed(2)}€.`
         }
     </script>

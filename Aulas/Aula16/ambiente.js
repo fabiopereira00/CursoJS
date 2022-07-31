@@ -1,9 +1,8 @@
-function parimp(n){
-    if(n%2 == 0){
-        return 'Par'
+function parImpar(n){
+    if(n % 2 == 0){
+        return true
     }else{
-        return 'Ímpar'
+        return flase
     }
-}
-let res = parimp(11)
-console.log(res)
+} let res = parImpar(4)
+console.log(res) 
